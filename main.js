@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 30000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 30000 * 2);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -25,7 +25,7 @@ let skybox = new THREE.Mesh(skyboxGeo, materialArray)
 for (let i = 0; i < 6; i++)
   materialArray[i].side = THREE.BackSide;
 
-skybox.position.y=1000
+skybox.position.y = 1000
 scene.add(skybox)
 
 
@@ -94,7 +94,6 @@ document.getElementById("pbtn").addEventListener("click", pJumb);
 
 
 
-
 //ground
 var groundGeometry = new THREE.PlaneGeometry(10000, 10000);
 const groundtext = new THREE.TextureLoader().load('atlas.png');
@@ -123,13 +122,17 @@ function onWindowResize() {
 }
 window.addEventListener('resize', onWindowResize);
 
-var clock = new THREE.Clock();
 
 function animate() {
-  var deltaTime = clock.getDelta()
-
+  var deltaTime = 0.016
 
   if (human) {
+
+    var modelPosition = new THREE.Vector3();
+    human.getWorldPosition(modelPosition);
+    // Adjust the camera position and look-at target as desired
+    camera.position.set(modelPosition.x, modelPosition.y + 5, modelPosition.z + 10);
+    camera.lookAt(modelPosition);
 
     document.getElementById('1value').innerText =
       `Height :
@@ -141,7 +144,7 @@ function animate() {
     X : ${parseInt(Vx)} m/s
     Z : ${parseInt(Vz)} m/s`;
 
-    
+
     document.getElementById('3value').innerText =
       ` Acceleration:
     Y : ${parseInt(Ay)} m/s 
@@ -203,11 +206,11 @@ function animate() {
 
     } else if (Height > 0 && opened) {
 
-      if(Vx<-15){}
+      if (Vx < -15) { }
       human.position.y = Height
       human.position.x = Xdistance
       human.position.z = Zdistance
-      
+
       if (parachute !== undefined) {
         parachute.position.x = human.position.x;
         parachute.position.y = human.position.y + 3.5;
@@ -219,14 +222,14 @@ function animate() {
 
       rho = rhoCalculate(P, T);
 
-      let FnetY = Fg(humanWeight + parachuteWeight, g) - FDrag(Cd, A, rho, Vy ) - FDrag(Cd,A,rho,Vy)
+      let FnetY = Fg(humanWeight + parachuteWeight, g) - FDrag(Cd, A, rho, Vy) - FDrag(Cd, A, rho, Vy)
       Ay = FnetY / (humanWeight + parachuteWeight);
       Vy += Ay * deltaTime;
       let hs = Vy * deltaTime;
       Height -= hs;
 
 
-      let FnetX = FWind(Cd, A, rho, Vwx) - FDrag(Cd, A, rho, Vx) 
+      let FnetX = FWind(Cd, A, rho, Vwx) - FDrag(Cd, A, rho, Vx)
       Ax = FnetX / (humanWeight + parachuteWeight);
       Vx += Ax * deltaTime;
       let distX = Vx * deltaTime;
@@ -260,34 +263,26 @@ function animate() {
     `)
 
       human.rotation.x = 0
-    }else if(!opened){
-      human.position.y=-2.5;
+    } else if (!opened) {
+      human.position.y = -2.5;
       console.log(`human pos :${human.position.y}`)
-      human.rotation.x=90
-    }else{
-      human.position.y=2; 
+      human.rotation.x = 90
+    } else {
+      human.position.y = 2;
       parachute.position.x = human.position.x;
       parachute.position.y = human.position.y + 3.5;
       parachute.position.z = human.position.z - 3.2;
     }
+  } else {
+    var modelPosition = new THREE.Vector3();
+    helicopter.getWorldPosition(modelPosition);
+    // camera.position.set(modelPosition.x, modelPosition.y, modelPosition.z + 20);
+    // camera.lookAt(modelPosition);
   }
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
   controls.update();
 
-
-  if (human) {
-    var modelPosition = new THREE.Vector3();
-    human.getWorldPosition(modelPosition);
-    // Adjust the camera position and look-at target as desired
-    camera.position.set(modelPosition.x, modelPosition.y+5, modelPosition.z + 10);
-    camera.lookAt(modelPosition);
-  } else {
-    var modelPosition = new THREE.Vector3();
-    helicopter.getWorldPosition(modelPosition);
-    camera.position.set(modelPosition.x, modelPosition.y, modelPosition.z + 20);
-    camera.lookAt(modelPosition);
-  }
 }
 
 
@@ -313,13 +308,13 @@ const Ci = 1; // قوة الرفع
 
 let Ay  //التسارع على محور المحور العمودي
 let Ax  // التسارع على المحور الأفقي
-let Vwy = -10  //  سرعة الرياح على المحور العمودي
-let Vwx = 10  // سرعة الرياح على المحور الأفقي
+let Vwy = 20  //  سرعة الرياح على المحور العمودي
+let Vwx = 35  // سرعة الرياح على المحور الأفقي
 let Xdistance = 0;
 
 let Az;   // التسارع على المحور الأفقي  
 let Vz = 1;  //السرعة على المحور الأفقي
-let Vwz = 10;  //سرعة الرياح على المحور الأفقي
+let Vwz = -10;  //سرعة الرياح على المحور الأفقي
 let Zdistance = 0;
 
 
@@ -376,18 +371,18 @@ document.getElementById('form-btn').addEventListener('click', function (e) {
 
 
   document.getElementById('1value').innerText =
-  `Height :
+    `Height :
   ${parseInt(Height)}  `;
-  
+
   document.getElementById('2value').innerText =
-  ` Velocity:
+    ` Velocity:
   Y : 0 m/s 
   X : 0 m/s
   Z : 0 m/s`;
-  
-  
+
+
   document.getElementById('3value').innerText =
-  ` Acceleration:
+    ` Acceleration:
   Y : 0 m/s 
   X : 0 m/s
   Z : 0 m/s`;
