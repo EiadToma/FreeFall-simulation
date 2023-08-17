@@ -1,0 +1,479 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1031,
+      "max": [
+        0.9994264245033264,
+        0.9994255304336548,
+        0.9970560073852539
+      ],
+      "min": [
+        -0.9994257688522339,
+        -0.9994261264801025,
+        -0.19509032368659973
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 12372,
+      "componentType": 5126,
+      "count": 1031,
+      "max": [
+        0.9807879328727722,
+        0.9807879328727722,
+        0.9999414682388306
+      ],
+      "min": [
+        -0.9807879328727722,
+        -0.9807879328727722,
+        -0.09799774736166
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1031,
+      "max": [
+        0.9990676641464233,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.4374999701976776
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 2538,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 24744,
+      "componentType": 5126,
+      "count": 296,
+      "max": [
+        0.9802119135856628,
+        0.9802114367485046,
+        -0.19509032368659973
+      ],
+      "min": [
+        -0.9802115559577942,
+        -0.9802117347717285,
+        -1.741012692451477
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 28296,
+      "componentType": 5126,
+      "count": 296,
+      "max": [
+        0.9576000571250916,
+        0.9576000571250916,
+        0.9597912430763245
+      ],
+      "min": [
+        -0.9576000571250916,
+        -0.9576000571250916,
+        -0.620330810546875
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 8248,
+      "componentType": 5126,
+      "count": 296,
+      "max": [
+        0.9384505748748779,
+        0.4375
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 10152,
+      "componentType": 5125,
+      "count": 672,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 31848,
+      "componentType": 5126,
+      "count": 8119,
+      "max": [
+        0.9935951828956604,
+        0.9935952425003052,
+        0.9951781034469604
+      ],
+      "min": [
+        -0.9935951828956604,
+        -10.70042896270752,
+        -0.9740254878997803
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 129276,
+      "componentType": 5126,
+      "count": 8119,
+      "max": [
+        1.0,
+        1.0,
+        0.9999984502792358
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9999984502792358
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10616,
+      "componentType": 5126,
+      "count": 8119,
+      "max": [
+        1.0000001192092896,
+        1.0000001192092896
+      ],
+      "min": [
+        0.0,
+        0.010000006295740604
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12840,
+      "componentType": 5125,
+      "count": 41376,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "marklynch6789 (https://sketchfab.com/marklynch6789)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/parachute-feb1ef90bdaf42d5afa27b91a452657f",
+      "title": "Parachute"
+    },
+    "generator": "Sketchfab-12.75.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 178344,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 75568,
+      "byteOffset": 178344,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 226704,
+      "byteOffset": 253912,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 480616,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Parachute_Top",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0116082,
+          0.031063,
+          0.00448155,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9944081018373239
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0800113,
+          0.0739477,
+          0.00769005,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9842462260228834
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Bottom",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.00544744,
+          0.00467916,
+          0.00524898,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9989079854948192
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Sphere_Parachute Top_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Sphere_TOP_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cylinder_Bottom_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "71074d3000164e14a591e187a027293d.fbx"
+    },
+    {
+      "children": [
+        3,
+        6,
+        9
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        -29.08647719990347,
+        -5.518906457566863,
+        -95.51711910171437,
+        0.0,
+        56.63930913109449,
+        79.46723428563203,
+        -21.83912397841966,
+        0.0,
+        77.11008775993375,
+        -60.45246356562044,
+        -19.98834696773717,
+        0.0,
+        407.6245422363281,
+        590.38623046875,
+        -100.54539489746094,
+        1.0
+      ],
+      "name": "Light"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Object_4"
+    },
+    {
+      "name": "Object_5"
+    },
+    {
+      "children": [
+        7,
+        8
+      ],
+      "matrix": [
+        -55.92865753173403,
+        5.532701787289326e-13,
+        2.177942337141119e-05,
+        0.0,
+        2.9138829838906983e-05,
+        5.649304652675563e-06,
+        74.82730865477927,
+        0.0,
+        -1.0910305410101292e-12,
+        55.92865753173811,
+        -4.222496177231073e-06,
+        0.0,
+        0.48972517251968384,
+        232.3109893798828,
+        -0.3937545120716095,
+        1.0
+      ],
+      "name": "Sphere"
+    },
+    {
+      "mesh": 0,
+      "name": "Sphere_Parachute Top_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Sphere_TOP_0"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        -5.243837939612095e-07,
+        -0.0,
+        6.9456739425658975,
+        -0.0,
+        -2.1188769593212715e-07,
+        1.4032688140868979,
+        -1.5997075964863836e-14,
+        -0.0,
+        6.667909145355129,
+        1.006826269714688e-06,
+        5.034131344490542e-07,
+        -0.0,
+        0.0,
+        134.55601501464844,
+        4.6566128730773926e-08,
+        1.0
+      ],
+      "name": "Cylinder"
+    },
+    {
+      "mesh": 2,
+      "name": "Cylinder_Bottom_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

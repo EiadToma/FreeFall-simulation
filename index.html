@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<link rel="stylesheet" href="./styles.css">
-		<style>
-			body { margin: 0; padding: 0;}
-		</style>
-	</head>
-	<body>
-		<div 
-class="welcome"
-id="welpage"
-		>
+
+<head>
+	<meta charset="utf-8">
+	<title>My first three.js app</title>
+	<link rel="stylesheet" href="./styles.css">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="welcome" id="welpage">
 		<form class="form">
 			<label> Human weight</label>
 			<input class="input" type="number" id="hw" value="80">
 
 			<label> Parachute weight </label>
 			<input class="input" type="number" id="pw" value="10">
-			
+
 			<label>Height</label>
 			<input class="input" type="number" id="height" value="4000">
 
@@ -29,32 +31,66 @@ id="welpage"
 			<label>Parachute width</label>
 			<input class="input" type="number" id="pcw" value="5">
 
+			<label>Initial velocity on Z</label>
+			<input class="input" type="number" id="vz0" value="5">
 
-			<button class="form-btn" id="form-btn" >Start</button>
+			<label>Initial velocity on x</label>
+			<input class="input" type="number" id="vx0" value="5">
+
+			<div>
+				<input type="radio" id="round" name="fav_language" value="round">
+				<label for="round">Round Parachute</label><br>
+				<input type="radio" id="rect" name="fav_language" value="rect">
+				<label for="rect">Rectangle Parachute</label>
+			</div>
+
+
+			<button class="form-btn" id="form-btn">Start</button>
 		</form>
-		</div>
-		<div
-		style="position: absolute; background-color: white; top: 30%; right: 1%; width: 70px; height: 70px; border-radius: 5px;"
+	</div>
+	<div style="position: absolute; background-color: transparent; top: 30%; right: 1%; width: 200px; height: 70px; border-radius: 5px;"
 		id="1value">
-		</div>
-		<div
-		style="position: absolute; background-color: white; top: 40%; right: 1%; width: 100px; height: 70px; border-radius: 5px;"
+	</div>
+	<div style="position: absolute; background-color: transparent; top: 40%; right: 1%; width: 200px; height: 70px; border-radius: 5px;"
 		id="2value">
+	</div>
+
+	<div style="position: absolute; background-color: transparent; top: 50%; right: 1%; width: 200px; height: 70px; border-radius: 5px;"
+		id="3value">
+	</div>
+	<div class='sliders'>
+		<div style="display: flex; justify-content: center;">
+			<label> Wind Velocity On X</label>
+			<input type="range" min="-15" max="15" value="0" class="slider" id="range1" style=" margin: 5px;" />
 		</div>
 
-		<div
-		style="position: absolute; background-color: white; top: 50%; right: 1%; width: 100px; height: 70px; border-radius: 5px;"
-		id="3value">
+		<div style="display: flex; justify-content: center;">
+			<label> Wind Velocity On Z</label>
+			<input type="range" min="-15" max="15" value="0" class="slider" id="range2" style="  margin: 5px; " />
 		</div>
-	
-		<button style="position: absolute; background-color: red; top: 30%; left: 30%; width: 50px; height: 50px; border-radius: 5px;"
+
+		<div style="display: flex; justify-content: center;">
+			<div id="slidervalue1"
+				style="width: 50px; background-color: transparent; height: 50px; margin: 5px; padding: 5px; border-radius: 5px;">
+			</div>
+
+			<div id="slidervalue2"
+				style="width: 50px; background-color: transparent; height: 50px; margin: 5px; padding: 5px; border-radius: 5px;">
+			</div>
+
+		</div>
+	</div>
+	<button
+		style="position: absolute; background-color: red; top: 0%; left: 0%; width: 50px; height: 50px; border-radius: 5px;"
 		id="btn" onclick="">
-			Jumb
-		</button>
-		<button style="position: absolute; background-color: red; top: 38%; left: 28%; width: 80px; height: 50px; border-radius: 5px;"
+		Jumb
+	</button>
+	<button
+		style="position: absolute; background-color: red; top: 38%; left: 0%; width: 80px; height: 50px; border-radius: 5px;"
 		id="pbtn" onclick="">
-			open parachute
-		</button>
-		<script type="module" src="/main.js"></script>
-	</body>
+		open parachute
+	</button>
+	<script type="module" src="/main.js"></script>
+</body>
+
 </html>

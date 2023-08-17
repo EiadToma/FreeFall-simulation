@@ -10,10 +10,11 @@
      background-image: url('./wal.jpg');
      background-repeat: no-repeat;
      background-size: cover;
+     
 }
 .form{
     background-color: gray;
-    height: 500px;
+    height: 650;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -24,11 +25,20 @@
 .input{
     width: 225px;
     height: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .form-btn{
     width: 200px;
     height: 60px;
     border-radius: 5px;
     background-color: aqua;
+}
+.sliders{
+    padding: 10px;
+    width: 200[x];
+    height: 200px;
+    position: absolute;
+    display:block;
+    top: 10%;
+    right: 3%;
 }
